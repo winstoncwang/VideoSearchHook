@@ -1,26 +1,14 @@
 import React from 'react';
-import axios from 'axios';
 
 class SearchBar extends React.Component {
 	//state
 	state = { term: '' };
 
-	async componentDidMount () {
-		//get method
-		// const searchResult = await axios.get(
-		// 	'https://www.googleapis.com/youtube/v3/search',
-		// 	{
-		// 		header : {},
-		// 		params : {
-		// 			part : this.props.term
-		// 		}
-		// 	}
-		// );
-	}
-
-	onSubmitForm (e) {
+	onSubmitForm = async (e) => {
 		e.preventDefault();
-	}
+
+		this.props.onSubmit(this.state.term);
+	};
 
 	render () {
 		return (
