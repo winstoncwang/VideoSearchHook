@@ -11,7 +11,7 @@ const KEY = 'AIzaSyCwzQbW7NX2QfO2ovUQJHuPdl138QSRSU4';
 // key did not merge in params for axios, its a bug
 
 class App extends React.Component {
-	state = { videoList: [] };
+	state = { videoList: [], videoSelected: '' };
 
 	onTermSubmit = async (term) => {
 		//child from parent
@@ -26,12 +26,20 @@ class App extends React.Component {
 		this.setState({ videoList: response.data.items });
 	};
 
+	onSelectVideoChange = async (videoId) => {
+		await this.setState({ videoSelected: videoId });
+		console.log(this.state);
+	};
+
 	render () {
 		return (
 			<div className="ui grid container">
 				<SearchBar onSubmit={this.onTermSubmit} />
 				<VideoDetail />
-				<VideoList vList={this.state.videoList} />
+				<VideoList
+					vList={this.state.videoList}
+					onSelectVideo={this.onSelectVideoChange}
+				/>
 			</div>
 		);
 	}
