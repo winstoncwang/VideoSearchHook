@@ -2,13 +2,18 @@ import React from 'react';
 
 import youtube from '../apis/youtube';
 
+//components
 import SearchBar from './SearchBar';
+import VideoList from './VideoList';
+import VideoDetail from './VideoDetail';
 
 const KEY = 'AIzaSyCwzQbW7NX2QfO2ovUQJHuPdl138QSRSU4';
 // key did not merge in params for axios, its a bug
 
 class App extends React.Component {
-	async onTermSubmit (term) {
+	state = { videoList: [] };
+
+	onTermSubmit = async (term) => {
 		//child from parent
 		const response = await youtube.get('/search', {
 			params : {
@@ -18,13 +23,15 @@ class App extends React.Component {
 			}
 		});
 
-		console.log(response);
-	}
+		this.setState({ videoList: response.data.items });
+	};
 
 	render () {
 		return (
 			<div className="ui grid container">
 				<SearchBar onSubmit={this.onTermSubmit} />
+				<VideoDetail />
+				<VideoList vList={this.state.videoList} />
 			</div>
 		);
 	}
