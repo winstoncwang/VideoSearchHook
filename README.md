@@ -40,3 +40,9 @@ App
 
     adding a baseURL using axios and fix axios bug with params overwrite
    
+---------------------------------------------
+
+1.4
+
+    adding various component and display video list
+   
