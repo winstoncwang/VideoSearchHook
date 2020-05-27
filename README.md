@@ -28,3 +28,9 @@ App
 
     adding SearchBar component
    
+---------------------------------------------
+
+1.2
+
+    adding config searchbar component, eventhandler and form submission"
+   
