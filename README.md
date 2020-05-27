@@ -34,3 +34,9 @@ App
 
     adding config searchbar component, eventhandler and form submission"
    
+---------------------------------------------
+
+1.3
+
+    adding a baseURL using axios and fix axios bug with params overwrite
+   
