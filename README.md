@@ -46,3 +46,9 @@ App
 
     adding various component and display video list
    
+---------------------------------------------
+
+1.5
+
+    selected video is passed to appjs using callback
+   
