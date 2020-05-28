@@ -11,7 +11,7 @@ const KEY = 'AIzaSyCwzQbW7NX2QfO2ovUQJHuPdl138QSRSU4';
 // key did not merge in params for axios, its a bug
 
 class App extends React.Component {
-	state = { videoList: [], videoSelected: '' };
+	state = { videoList: [], videoSelected: [] };
 
 	onTermSubmit = async (term) => {
 		//child from parent

@@ -5,7 +5,6 @@ class VideoItem extends React.Component {
 
 	onClickChange = async () => {
 		await this.setState({ videoSelected: this.props.vList });
-		console.log(this.state.videoSelected);
 		this.props.onSelectVideo(this.state.videoSelected);
 	};
 

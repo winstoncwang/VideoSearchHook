@@ -22,7 +22,6 @@ class VideoList extends React.Component {
 			);
 		});
 
-		console.log(this.props.vList);
 		return (
 			<div className="ui four wide column">
 				<div className="ui relaxed divided list">{renderedList}</div>
