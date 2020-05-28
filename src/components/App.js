@@ -28,14 +28,17 @@ class App extends React.Component {
 
 	onSelectVideoChange = async (videoId) => {
 		await this.setState({ videoSelected: videoId });
-		console.log(this.state);
 	};
 
 	render () {
 		return (
 			<div className="ui grid container">
 				<SearchBar onSubmit={this.onTermSubmit} />
-				<VideoDetail />
+				<VideoDetail
+					vList={this.state.videoList}
+					sVideo={this.state.videoSelected}
+				/>
+				{/*vlist:videolist slist:selectedvideo */}
 				<VideoList
 					vList={this.state.videoList}
 					onSelectVideo={this.onSelectVideoChange}

@@ -4,7 +4,8 @@ class VideoItem extends React.Component {
 	state = { videoSelected: '' };
 
 	onClickChange = async () => {
-		await this.setState({ videoSelected: this.props.videoId });
+		await this.setState({ videoSelected: this.props.vList });
+		console.log(this.state.videoSelected);
 		this.props.onSelectVideo(this.state.videoSelected);
 	};
 
@@ -18,9 +19,9 @@ class VideoItem extends React.Component {
 				/>
 				<div className="content">
 					<div className="header">{this.props.title}</div>
-					<div className="description">
+					{/* <div className="description">
 						{this.props.snippet.description}
-					</div>
+					</div> */}
 				</div>
 			</div>
 		);

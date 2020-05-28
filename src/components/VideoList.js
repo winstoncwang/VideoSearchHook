@@ -4,18 +4,19 @@ import VideoItem from './VideoItem';
 class VideoList extends React.Component {
 	state = { videoSelected: '' };
 
-	onSelectVideoChange = async (videoId) => {
-		await this.setState({ videoSelected: videoId });
+	onSelectVideoChange = async (video) => {
+		await this.setState({ videoSelected: video });
 		this.props.onSelectVideo(this.state.videoSelected);
 	};
 
 	render () {
-		const renderedList = this.props.vList.map(({ id, snippet }) => {
+		const renderedList = this.props.vList.map((video) => {
 			return (
 				<VideoItem
-					videoId={id.videoId}
-					title={snippet.title}
-					snippet={snippet}
+					vList={video}
+					videoId={video.id.videoId}
+					title={video.snippet.title}
+					snippet={video.snippet}
 					onSelectVideo={this.onSelectVideoChange}
 				/>
 			);
