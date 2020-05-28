@@ -58,3 +58,9 @@ App
 
     cleaner code for passing props up to parent component
    
+---------------------------------------------
+
+1.6
+
+    shows embedded youtube clip using videoid
+   
