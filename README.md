@@ -52,3 +52,9 @@ App
 
     selected video is passed to appjs using callback
    
+---------------------------------------------
+
+1.51
+
+    cleaner code for passing props up to parent component
+   
