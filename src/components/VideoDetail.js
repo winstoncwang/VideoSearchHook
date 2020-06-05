@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDetail = ({ sVideo }) => {
 	let srcURL;
-	console.log(sVideo);
+
 	if (sVideo.length === 0) {
 		return <div className="ui twelve wide column" />;
 	}
@@ -16,16 +16,17 @@ const VideoDetail = ({ sVideo }) => {
 	return (
 		<div className="ui twelve wide column">
 			<iframe
+				title="videoplayer"
 				width="100%"
-				height="60%"
+				height="80%"
 				src={srcURL}
 				frameBorder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 				allowFullScreen
 			/>
-			<div className="ui  segment container">
+			<div className="ui segment container" style={{ height: '18%' }}>
 				<div className="content">
-					<div className="header">{sVideo.snippet.title}</div>
+					<h2>{sVideo.snippet.title}</h2>
 					<p>{sVideo.snippet.description}</p>
 				</div>
 			</div>

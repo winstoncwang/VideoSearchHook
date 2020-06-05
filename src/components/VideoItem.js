@@ -13,12 +13,7 @@ const VideoItem = ({ video, onSelectVideo }) => {
 				src={video.snippet.thumbnails.medium.url}
 				alt={video.snippet.title}
 			/>
-			<div className="content">
-				<div className="header">{video.snippet.title}</div>
-				{/* <div className="description">
-						{this.props.snippet.description}
-					</div> */}
-			</div>
+			<span>{video.snippet.title}</span>
 		</div>
 	);
 };
