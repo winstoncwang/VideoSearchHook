@@ -26,13 +26,13 @@ class App extends React.Component {
 		this.setState({ videoList: response.data.items });
 	};
 
-	onSelectVideoChange = async (videoId) => {
-		await this.setState({ videoSelected: videoId });
+	onSelectVideoChange = (video) => {
+		this.setState({ videoSelected: video });
 	};
 
 	render () {
 		return (
-			<div className="ui grid container">
+			<div className="ui grid container segment">
 				<SearchBar onSubmit={this.onTermSubmit} />
 				<VideoDetail
 					vList={this.state.videoList}
@@ -40,7 +40,7 @@ class App extends React.Component {
 				/>
 				{/*vlist:videolist slist:selectedvideo */}
 				<VideoList
-					vList={this.state.videoList}
+					vLists={this.state.videoList}
 					onSelectVideo={this.onSelectVideoChange}
 				/>
 			</div>
