@@ -64,3 +64,9 @@ App
 
     shows embedded youtube clip using videoid
    
+---------------------------------------------
+
+1.7
+
+    embedded video responsive layout, add in playlist result.
+   
