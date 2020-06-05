@@ -70,3 +70,9 @@ App
 
     embedded video responsive layout, add in playlist result.
    
+---------------------------------------------
+
+1.8
+
+    default video selected at every new search, initial term added and better layout
+   
