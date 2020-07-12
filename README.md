@@ -76,3 +76,9 @@ App
 
     default video selected at every new search, initial term added and better layout
    
+---------------------------------------------
+
+2.1
+
+    alternative version created based on using react hook
+   
