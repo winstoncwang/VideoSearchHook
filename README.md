@@ -88,3 +88,9 @@ App
 
     refractor the searchbar component to a function hook
    
+---------------------------------------------
+
+2.3
+
+    refractor app.js into react hooks
+   
