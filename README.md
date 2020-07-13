@@ -82,3 +82,9 @@ App
 
     alternative version created based on using react hook
    
+---------------------------------------------
+
+2.2
+
+    refractor the searchbar component to a function hook
+   
