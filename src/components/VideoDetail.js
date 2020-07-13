@@ -3,7 +3,7 @@ import React from 'react';
 const VideoDetail = ({ sVideo }) => {
 	let srcURL;
 
-	if (sVideo.length === 0) {
+	if (sVideo === null) {
 		return <div className="ui twelve wide column" />;
 	}
 	if (sVideo.id.hasOwnProperty('playlistId')) {

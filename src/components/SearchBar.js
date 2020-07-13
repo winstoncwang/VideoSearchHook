@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const SearchBar = ({ onSubmit }) => {
 	const [ term, setTerm ] = useState('');
 
-	onSubmitForm = (e) => {
+	const onSubmitForm = (e) => {
 		e.preventDefault();
 
 		onSubmit(term);
@@ -12,7 +12,7 @@ const SearchBar = ({ onSubmit }) => {
 	return (
 		<div className="row">
 			<div className="ui column search-bar">
-				<form className="ui form" onSubmit={this.onSubmitForm}>
+				<form className="ui form" onSubmit={onSubmitForm}>
 					<div className="field">
 						<label>Video Search:</label>
 						<input
@@ -29,6 +29,8 @@ const SearchBar = ({ onSubmit }) => {
 		</div>
 	);
 };
+
+export default SearchBar;
 
 // class SearchBar extends React.Component {
 // 	//state
@@ -62,5 +64,3 @@ const SearchBar = ({ onSubmit }) => {
 // 		);
 // 	}
 // }
-
-export default SearchBar;
