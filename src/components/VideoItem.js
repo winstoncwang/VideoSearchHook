@@ -13,7 +13,7 @@ const VideoItem = ({ video, onSelectVideo }) => {
 				src={video.snippet.thumbnails.medium.url}
 				alt={video.snippet.title}
 			/>
-			<span>{video.snippet.title}</span>
+			<span style={{ fontSize: '0.7rem' }}>{video.snippet.title}</span>
 		</div>
 	);
 };

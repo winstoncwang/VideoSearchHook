@@ -18,13 +18,13 @@ const VideoDetail = ({ sVideo }) => {
 			<iframe
 				title="videoplayer"
 				width="100%"
-				height="80%"
+				height="60%"
 				src={srcURL}
 				frameBorder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 				allowFullScreen
 			/>
-			<div className="ui segment container" style={{ height: '18%' }}>
+			<div className="ui segment container">
 				<div className="content">
 					<h2>{sVideo.snippet.title}</h2>
 					<p>{sVideo.snippet.description}</p>
