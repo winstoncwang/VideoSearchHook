@@ -100,3 +100,9 @@ App
 
     create a new custom hook used to fetch youtube contents
    
+---------------------------------------------
+
+2.4.1
+
+    display update
+   
