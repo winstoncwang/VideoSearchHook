@@ -94,3 +94,9 @@ App
 
     refractor app.js into react hooks
    
+---------------------------------------------
+
+2.4
+
+    create a new custom hook used to fetch youtube contents
+   
